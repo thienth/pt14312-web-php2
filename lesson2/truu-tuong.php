@@ -24,18 +24,18 @@ class SinhVien{
     // var $mautoc;
     // var $benhtruyennhiem;
 
-    function an(){}
-    function ngu(){}
+    // function an(){}
+    // function ngu(){}
     function dihoc(){}
     function hoclai(){}
     function dithi(){}
     function lamquiz(){}
     function lamlab(){}
-    function henho(){}
-    function totinh(){}
-    function dabong(){}
-    function game(){}
-    function trada(){}
+    // function henho(){}
+    // function totinh(){}
+    // function dabong(){}
+    // function game(){}
+    // function trada(){}
     function diemdanh(){}
 
 
