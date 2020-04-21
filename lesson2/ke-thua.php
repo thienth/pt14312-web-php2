@@ -38,7 +38,7 @@ $rin->getInfo();
 
 require_once './Category.php';
 require_once './Product.php';
-// $pros = Product::where('name', 'like', "%DVM%")->get();
+$pros = Product::where('name', 'like', "%DVM%")->get();
 // echo "<pre>";
 // var_dump($pros);
 
