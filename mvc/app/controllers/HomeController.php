@@ -1,8 +1,10 @@
 <?php
+require_once './app/models/Product.php';
 class HomeController{
 
     public function index(){
-        return "Trang chủ website";
+        $products = Product::all();
+        include_once './app/views/homepage.php';
     }
 
     public function detail(){
