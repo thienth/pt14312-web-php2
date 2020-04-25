@@ -1,0 +1,10 @@
+{
+    "name": "thienth/mvc",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
