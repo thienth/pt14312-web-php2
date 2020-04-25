@@ -4,7 +4,14 @@ use App\Models\Product;
 class HomeController{
 
     public function index(){
-        $products = Product::all();
+        // $products = Product::all();
+
+
+        $products = Product::find(9);
+
+        echo "<pre>";
+        var_dump($products);
+        die;
         // header('location: /');
         // die;
         include_once './app/views/homepage.php';
