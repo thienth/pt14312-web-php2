@@ -1,8 +1,8 @@
 <?php
 namespace App\Models;
-
-class Category extends BaseModel{
-    var $table = "categories";
+use Illuminate\Database\Eloquent\Model;
+class Category extends Model{
+    protected $table = "categories";
 
     
 }

@@ -1,7 +1,8 @@
 <?php
 namespace App\Models;
-class Product extends BaseModel{
-    var $table = "products";
+use Illuminate\Database\Eloquent\Model;
+class Product extends Model{
+    protected $table = "products";
 }
 
 ?>
