@@ -50,6 +50,10 @@ switch ($url) {
         $ctr = new ProductController();
         $ctr->addForm();
         break;
+    case 'save-add-product':
+        $ctr = new ProductController();
+        $ctr->saveAdd();
+        break;
     default:
         echo "Đường dẫn không tồn tại";
         break;
