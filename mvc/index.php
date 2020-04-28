@@ -10,6 +10,8 @@ require_once './commons/database-config.php';
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
 use App\Controllers\CategoryController;
+
+// routing
 switch ($url) {
     case '/':
         $ctr = new HomeController();
