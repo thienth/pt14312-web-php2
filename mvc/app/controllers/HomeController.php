@@ -5,8 +5,10 @@ class HomeController extends BaseController{
 
     public function index(){
         $products = Product::all();
-
-        $this->render('homepage.index', ['listItem' => $products]);
+        
+        $this->render('homepage.index', [
+                                            'listItem' => $products
+                                        ]);
     }
 
     public function detail(){

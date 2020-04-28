@@ -15,40 +15,40 @@ use App\Controllers\CategoryController;
 switch ($url) {
     case '/':
         $ctr = new HomeController();
-        echo $ctr->index();
+        $ctr->index();
         break;
     
     case 'detail':
         $ctr = new HomeController();
-        echo $ctr->detail();
+        $ctr->detail();
         break;
     case 'insert-cate':
         $ctr = new CategoryController();
-        echo $ctr->addData();
+        $ctr->addData();
         break;
     
     case 'update-cate':
         $ctr = new CategoryController();
-        echo $ctr->editData();
+        $ctr->editData();
         break;
 
     case 'delete-cate':
         $ctr = new CategoryController();
-        echo $ctr->delete();
+        $ctr->delete();
         break;
     case 'list-cate':
         $ctr = new CategoryController();
-        echo $ctr->index();
+        $ctr->index();
         break;
     
     case 'contact':
         $ctr = new HomeController();
-        echo $ctr->contact();
+        $ctr->contact();
         break;
 
     case 'add-product':
         $ctr = new ProductController();
-        echo $ctr->addForm();
+        $ctr->addForm();
         break;
     default:
         echo "Đường dẫn không tồn tại";
