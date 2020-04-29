@@ -10,6 +10,27 @@ class ProductController extends BaseController{
         $this->render('product.add-form', ['cates' => $cates]);
     }
 
+    public function remove(){
+        $removeId = isset($_GET['id']) ? $_GET['id'] : null;
+        if(!$removeId){
+            header("location: ./?msg=không đủ thông tin để xóa");
+            die;
+        }
+        // kiểm tra xem id có thật hay không
+        $model = Product::find($removeId);
+        
+        if(!$model){
+            $msg = "id không tồn tại!";
+        }else{
+            Product::destroy($removeId);
+            $msg = "Xóa sản phẩm thành công";
+        }
+
+        header("location: ./?msg=$msg");
+        die;
+
+    }
+
     public function saveAdd(){
         $requestData = $_POST;
         $imgFile = $_FILES['image'];

@@ -54,6 +54,10 @@ switch ($url) {
         $ctr = new ProductController();
         $ctr->saveAdd();
         break;
+    case 'remove-product':
+        $ctr = new ProductController();
+        $ctr->remove();
+        break;
     default:
         echo "Đường dẫn không tồn tại";
         break;
