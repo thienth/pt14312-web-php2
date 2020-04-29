@@ -85,6 +85,38 @@ class ProductController extends BaseController{
         
     }
 
+    public function saveEdit(){
+        $id = $_GET['id'];
+        $id = isset($_GET['id']) ? $_GET['id'] : null;
+        if(!$id){
+            header("location: ./?msg=không đủ thông tin để xóa");
+            die;
+        }
+        // kiểm tra xem id có thật hay không
+        $model = Product::find($id);
+        
+        if(!$model){
+            $msg = "id không tồn tại!";
+            header("location: ./?msg=$msg");
+            die;
+        }
+
+        $requestData = $_POST;
+        $model->fill($requestData);
+
+        $imgFile = $_FILES['image'];
+        $filename = $model->image;
+        // nếu có ảnh up lên thì lưu ảnh
+        if($imgFile['size'] > 0){
+            $filename = uniqid() . '-' . $imgFile['name'];
+            move_uploaded_file($imgFile['tmp_name'], './public/uploads/' . $filename);
+            $filename = 'public/uploads/' . $filename;
+        }
+        $model->image = $filename;
+        $model->save();
+        header('location: ./');
+    }
+
 
 }
 
