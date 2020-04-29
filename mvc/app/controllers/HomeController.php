@@ -12,8 +12,8 @@ class HomeController extends BaseController{
                                         ]);
     }
 
-    public function detail(){
-        return "Trang chi tiết 1 sản phẩm";
+    public function giaoDien(){
+        $this->render('layouts.main');
     }
 
     public function contact(){

@@ -66,6 +66,10 @@ switch ($url) {
         $ctr = new ProductController();
         $ctr->saveEdit();
         break;
+    case 'giao-dien':
+        $ctr = new HomeController();
+        $ctr->giaoDien();
+        break;
     default:
         echo "Đường dẫn không tồn tại";
         break;

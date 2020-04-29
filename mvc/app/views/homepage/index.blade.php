@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,15 +8,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
-<body>
+<body> --}}
 
-    <div class="container">
+    {{-- <div class="container">
         <nav class="nav">
             <a class="nav-link" href="./">Quản lý sản phẩm</a>
             <a class="nav-link" href="./add-product">Thêm sản phẩm</a>
             <a class="nav-link" href="./category">Quản lý danh mục</a>
             <a class="nav-link" href="./add-category">Thêm danh mục</a>
-        </nav>
+        </nav> --}}
+@extends('layouts.main')
+@section('header')
+<nav class="nav">
+    <a class="nav-link" href="./">Quản lý sản phẩm</a>
+    <a class="nav-link" href="./add-product">Thêm sản phẩm</a>
+    <a class="nav-link" href="./category">Quản lý danh mục</a>
+    <a class="nav-link" href="./add-category">Thêm danh mục</a>
+</nav>
+@endsection
+@section('main-content')
         <p class="text-danger">{{$errMsg}}</p>
         <table class="table table-stripped">
             <thead>
@@ -45,8 +55,9 @@
                 @endforeach
             </tbody>
         </table>
-    </div>
+@endsection
+    {{-- </div>
     
     
 </body>
-</html>
+</html> --}}
