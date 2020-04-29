@@ -10,6 +10,28 @@ class ProductController extends BaseController{
         $this->render('product.add-form', ['cates' => $cates]);
     }
 
+    public function editForm(){
+        $removeId = isset($_GET['id']) ? $_GET['id'] : null;
+        if(!$removeId){
+            header("location: ./?msg=không đủ thông tin để xóa");
+            die;
+        }
+        // kiểm tra xem id có thật hay không
+        $model = Product::find($removeId);
+        
+        if(!$model){
+            $msg = "id không tồn tại!";
+            header("location: ./?msg=$msg");
+            die;
+        }
+        
+        $cates = Category::all();
+        $this->render('product.edit-form', [
+                                                'cates' => $cates,
+                                                'model' => $model
+                                            ]);
+
+    }
     public function remove(){
         $removeId = isset($_GET['id']) ? $_GET['id'] : null;
         if(!$removeId){

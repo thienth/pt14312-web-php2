@@ -58,6 +58,10 @@ switch ($url) {
         $ctr = new ProductController();
         $ctr->remove();
         break;
+    case 'edit-product':
+        $ctr = new ProductController();
+        $ctr->editForm();
+        break;
     default:
         echo "Đường dẫn không tồn tại";
         break;
