@@ -32,6 +32,7 @@
             <thead>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Category</th>
                 <th>Image</th>
                 <th>Price</th>
                 <th>
@@ -43,6 +44,7 @@
                     <tr>
                         <td>{{$pro->id}}</td>
                         <td>{{$pro->name}}</td>
+                        <td>{{$pro->getCategoryName()}}</td>
                         <td>
                             <img src="{{$pro->image}}" class="img-avatar" width="100">
                         </td>
